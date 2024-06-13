@@ -93,7 +93,6 @@
   <ul>
     <li><a href="#abstract-section">Abstract</a></li>
     <li><a href="#workflow-section">Workflow</a></li>
-    <li><a href="#example-section">Running Example</a>
     <li><a href="#operation-section">Operation Guidance</a>
       <ul class="submenu">
         <li ><a onmouseover="this.style.color='#00a8e1'" onmouseout="this.style.color='#222'" href="#prerequisites" style="color: #222;font-size: 16px">· Prerequisites</a></li>
@@ -101,6 +100,8 @@
         <!-- Add more sub-items as needed -->
       </ul>
     </li>
+    <li><a href="#example-section">Running Example</a>
+
     <li>
       <a href="#experiment-section">Experiment Result</a>
 <!--      <ul class="submenu">-->
@@ -168,6 +169,44 @@
   <img src="https://github.com/Auto-TM/AutoTM.github.io/blob/main/assets/images/workflow.png?raw=true" alt="workflow" style="width: 1000px; height: auto;">
 </div>
 
+
+
+<div class="user-details" id="operation-section">
+  <h1 style="font-weight: bold;" >Operation Guidance</h1>
+  <style>
+    ol {
+      padding-left: 20px;
+    }
+    li {
+      text-align: left;
+    }
+  </style>
+
+  <ol>
+    <li>
+      <h3 id="prerequisites">Prerequisites</h3>
+      <ul>
+        <li>Android emulator with API 24+ with target app installed</li>
+        <li>Source app test case code</li>
+        <li>Target app package name and launch activity</li>
+        <li>GPT-4 of OpenAI API Key</li>
+        <li>Python 3.8+</li>
+      </ul>
+    </li>
+
+    <li>
+      <h3 id="usage">Usage</h3>
+      <ul>
+        <li>Install the required packages using the command: 'pip install -r requirements.txt'.</li>
+        <li>Populate the 'main.py' file with the information mentioned in the Prerequisites section, and then initiate the program.</li>
+        <li>You can view the operation logs of the four agents (test semantic analyzer, event contextual semantic analyzer, event selector, test script generator) in the console or in the 'log/run.log' file.</li>
+        <li>After the migration is complete, you will find a markdown file summarizing the workflow of this migration in the folder containing the 'source app test case code'.</li>
+      </ul>
+    </li>
+  </ol>
+
+
+</div>
 <div class="user-details" id="example-section">
   <h1 style="font-weight: bold;" >Running Example</h1>
   <p style="text-align: left;">This example illustrates the migration of a test case between two shopping list management applications, demonstrating the migratability of a test case for sorting items in descending order by price from a source application to a target application.
@@ -179,23 +218,23 @@
   <img src="https://github.com/Auto-TM/AutoTM.github.io/blob/main/assets/images/motivation_example.png?raw=true" alt="workflow" style="width: 1000px; height: auto;">
   <div style="text-align: left;">
     Here is the detailed workflow process for migrating the running example using AutoTM:
-  <ul style="margin-top: 1px">
-    <li>
-      The 'Semantics of Source Test Case' is extracted by the Test Semantic Analyzer.
-    </li>
-    <li>
-      The 'Contextual Semantics of Widgets' is obtained through the Event Contextual Analyzer.
-    </li>
-    <li>
-      The 'Selected Event(s) and Script' is derived using the Event Selector and the Test Script Generator.
-    </li>
-    <li>
-      The 'Migration Success' denotes that the migration process is successful and includes the scripts that are executed during the process.
-    </li>
-  </ul>
+    <ul style="margin-top: 1px">
+      <li>
+        The 'Semantics of Source Test Case' is extracted by the Test Semantic Analyzer.
+      </li>
+      <li>
+        The 'Contextual Semantics of Widgets' is obtained through the Event Contextual Analyzer.
+      </li>
+      <li>
+        The 'Selected Event(s) and Script' is derived using the Event Selector and the Test Script Generator.
+      </li>
+      <li>
+        The 'Migration Success' denotes that the migration process is successful and includes the scripts that are executed during the process.
+      </li>
+    </ul>
   </div>
   <div class="editable">
-<!--    <h1 style="text-align: left;">1</h1>-->
+    <!--    <h1 style="text-align: left;">1</h1>-->
 
     <p style="text-align: left;font-weight: bold;font-size: larger">Semantics of Source Test case</p>
     <div style="text-align: left;">
@@ -423,44 +462,6 @@
       ASSERT (RecyclerView, R.id.list_items, (), customAssertion "ViewTextOrderAssertion"): Verify that the items in the shopping list are sorted as expected, specifically looking for "Meat", "Egg", and "Noodles" in that order. Exec_Success
     </div>
   </div>
-</div>
-
-
-<div class="user-details" id="operation-section">
-  <h1 style="font-weight: bold;" >Operation Guidance</h1>
-  <style>
-    ol {
-      padding-left: 20px;
-    }
-    li {
-      text-align: left;
-    }
-  </style>
-
-  <ol>
-    <li>
-      <h3 id="prerequisites">Prerequisites</h3>
-      <ul>
-        <li>Android emulator with API 24+ with target app installed</li>
-        <li>Source app test case code</li>
-        <li>Target app package name and launch activity</li>
-        <li>GPT-4 of OpenAI API Key</li>
-        <li>Python 3.8+</li>
-      </ul>
-    </li>
-
-    <li>
-      <h3 id="usage">Usage</h3>
-      <ul>
-        <li>Install the required packages using the command: 'pip install -r requirements.txt'.</li>
-        <li>Populate the 'main.py' file with the information mentioned in the Prerequisites section, and then initiate the program.</li>
-        <li>You can view the operation logs of the four agents (test semantic analyzer, event contextual semantic analyzer, event selector, test script generator) in the console or in the 'log/run.log' file.</li>
-        <li>After the migration is complete, you will find a markdown file summarizing the workflow of this migration in the folder containing the 'source app test case code'.</li>
-      </ul>
-    </li>
-  </ol>
-
-
 </div>
 
 <div class="user-details"  id="experiment-section">

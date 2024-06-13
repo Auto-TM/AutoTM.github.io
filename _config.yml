@@ -1,0 +1,14 @@
+# Site settings
+title: Cross-app Test Migration via LLM Powered Contextual Semantics Analysis
+description: This page contains the dataset used in the ASE 2024 submission titled "Cross-app Test Migration via LLM Powered Contextual Semantics Analysis".
+# baseurl: "" # the subpath of your site, e.g. /blog
+
+# User settings
+username: Cross-app Test Migration via LLM Powered Contextual Semantics Analysis
+user_description: This page contains the dataset used in the ASE 2024 submission titled "Cross-app Test Migration via LLM Powered Contextual Semantics Analysis".
+user_title: This page contains the dataset used in the ASE 2024 submission titled "Cross-app Test Migration via LLM Powered Contextual Semantics Analysis".
+
+github_username:  AutoTM
+
+exclude: ['package.json', 'src', 'node_modules', 'vendor']
+
